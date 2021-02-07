@@ -1,0 +1,28 @@
+﻿body {
+}
+
+.areamenu
+{
+	border-right: gray 1px dotted;
+	border-bottom: gray 1px solid;
+}
+.piecontenido
+{
+	border-bottom: gray 1px solid;
+}
+.areanavegacion
+{
+	background-image: url(Imagenes/menu.gif);
+	color: white;
+}
+
+.botonnuevo
+{
+	font-weight: bold;
+	color: white;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	background-color: #0099ff;
+	border-bottom-style: none;
+}
