@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script type='text/javascript' src="xml2json.js"></script>
+
+    <script type='text/javascript'>
+        $(window).load(function() {
+
+            const x2js = new X2JS();
+
+            const txtXML = {}; //$("#xmlArea");
+            const txtJSON = {}; //$('#jsonArea');
+
+            let btnXML2JSON = {};
+            let btnJSON2XML = {};
+
+            const convertirXML2JSON = () => {
+                txtJSON.val(
+                    JSON.stringify(x2js.xml_str2json(txtXML.val()))
+                    // console.log('Convertir de XML a JSON');
+                )
+            }
+
+            const convertirJSON2XML = () => {
+                console.log('Convertir de JSOn a XML');
+                txtXML.val(x2js.json2xml_str(JSON.parse(txtJSON.val())))
+            }
+
+            const bind = () => {
+                btnJSON2XML.click(convertirJSON2XML);
+                btnXML2JSON.click(convertirXML2JSON);
+            }
+
+            const inicializar = () => {
+                txtJSON = $('#jsonArea');
+                txtXML = $("#xmlArea");
+                btnXML2JSON = $('convertToJsonBtn');
+                btnJSON2XML = $('convertToXmlBtn');
+                txtXML.val("<root><child><textNode>First &amp; Child</textNode></child><child><textNode>Second Child</textNode></child><testAttrs attr1='attr1Value'/></root>");
+                bind();
+            }
+
+            inicializar();
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>X2JS Demo</h1>
+    <button id="convertToJsonBtn">XML => JSON</button>
+    <button id="convertToXmlBtn">JSON => XML</button>
+    <div>
+        <h4>XML:</h4>
+        <textarea id="xmlArea" cols="55" rows="15"></textarea>
+    </div>
+
+    <div>
+        <h4>JSON:</h4>
+        <textarea id="jsonArea" cols="55" rows="15"></textarea>
+    </div>
+</body>
+
+</html>
