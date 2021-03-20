@@ -25,6 +25,7 @@ namespace wk08.Controllers
                                           new XElement("Proveedor", producto.Cod_Proveedor),
                                           new XElement("Descontinuado", producto.Nombre_Producto))
                                           ));
+            // retorna el documento a string
             return documento.Document.ToString();
         }
 
