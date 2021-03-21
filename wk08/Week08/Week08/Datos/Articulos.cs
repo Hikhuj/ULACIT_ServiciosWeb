@@ -21,9 +21,10 @@ namespace Week08.Datos
 
         // Metodo estatico que retorne un objeto de tipo lista de los articulos
         // Agrego la liberia de los modelos para referenciar
+        // Este metodo va a ser usado en el controlador para obtener la lista de datos de la DB
         public static List<Articulos> obtenerArticulos()
         {
-            using (ComercioEntities db = new ComerEntities())
+            using (ComercioEntities db = new ComercioEntities())
             {
                 return (from a in db.Productos
                         select new Articulos
