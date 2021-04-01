@@ -13,6 +13,8 @@ namespace Week08.Datos
 
         public string Nombre_Producto { get; set; }
 
+        // EL signo de interrogacion le permite al sistema hacer una conversion
+        // implicita para evitar errores, entonces si no hay numero, lo convierte a cero.
         public int? Cod_Linea { get; set; }
 
         public int? Cod_Proveedor { get; set; }
@@ -27,6 +29,7 @@ namespace Week08.Datos
             using (ComercioEntities db = new ComercioEntities())
             {
                 return (from a in db.Productos
+                    // aqui estoy dando nombre a un nuevo objeto del que ocupo usar
                         select new Articulos
                         {
                             Cod_Producto = a.Cod_Producto,

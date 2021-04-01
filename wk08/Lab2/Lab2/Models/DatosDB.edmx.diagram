@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="65c0a73655bb407687c36f36da73c2a5" Name="Diagram1">
+        <EntityTypeShape EntityType="ComercioModel.Bitacora" Width="1.5" PointX="8" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Canton" Width="1.5" PointX="10" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Consecutivo" Width="1.5" PointX="13" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Detalle_Factura" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Detalle_Pedido" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Distrito" Width="1.5" PointX="12.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Errore" Width="1.5" PointX="8" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Factura" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Linea" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Pedido" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Privilegio" Width="1.5" PointX="8.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Privilegios_Usuarios" Width="1.5" PointX="11" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Producto" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Proveedore" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Provincia" Width="1.5" PointX="7.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.sysdiagram" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Tipo_Consecutivo" Width="1.5" PointX="10.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercioModel.Usuario" Width="1.5" PointX="5.75" PointY="11.25" IsExpanded="true" />
+        <AssociationConnector Association="ComercioModel.FK_Bbitacora_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK__Canton__Cod_Prov__65370702" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK__Distrito__Cod_Ca__681373AD" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK_Consecutivos_tbl_tipo_consecutivo" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK_Detalle_Factura_Facturas" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK_Detalle_Factura_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK_Detalle_Pedido_Pedidos" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK_Detalle_Pedido_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK_Errores_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK_Productos_Lineas" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK_Pedidos_Proveedores" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK_Privilegios_Usuarios_Privilegios" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK_Privilegios_Usuarios_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="ComercioModel.FK_Productos_Proveedores" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
