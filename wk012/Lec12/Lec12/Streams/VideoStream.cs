@@ -18,13 +18,16 @@ namespace Lec12.Streams
         }
 
         // vamos a hacer una tarea asincrona ya que es un hilo
-        public async Task WriteToStream(Stream outputStream, HttpContent content, TransportContext context)
+        // public async Task WriteToStream(Stream outputStream, HttpContent content, TransportContext context)
+        public async Task WriteToStream(Stream outputStream, 
+                                        HttpContent content,
+                                        TransportContext context)
         {
             // Vamos a indicar la ruta del video o donde este el video
             // string videoFileName = "\\Video\\Christmas.mp4";
             // otra forma interesante puede ser
             // De esta forma podriamos trabajar un poco mas dinamicos sin ser tan estaticos
-            string videoFileName = "\\Vivdeo\\" + videoName + ".mp4";
+            string videoFileName = "\\Video\\" + videoName + ".mp4";
             try
             {
                 var buffer = new byte[65536];
